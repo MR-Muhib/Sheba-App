@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import ServiceCard from "../../COMPONENTS/Servises/ServiceCard";
 
 const Services = () => {
   const servise = [
@@ -85,54 +85,15 @@ const Services = () => {
     },
   ];
 
-  const ceregories = [
-    {
-      id: 1,
-      name: "Gas Stove",
-    },
-    {
-      id: 2,
-      name: "Sanitary-related",
-    },
-    {
-      id: 3,
-      name: "clean your home",
-    },
-    {
-      id: 4,
-      name: "shifting services",
-    },
-    {
-      id: 5,
-      name: "health services",
-    },
-    {
-      id: 6,
-      name: "Pre-Service",
-    },
-    {
-      id: 6,
-      name: "Pre-Service",
-    },
-    {
-      id: 8,
-      name: "caregiver service",
-    },
-    {
-      id: 9,
-      name: "large population",
-    },
-  ];
-
+  // service_details/:id
   return (
     <>
       <h1 className="text-4xl m-5 font-bold">All Servises</h1>
-      <div className="ml-5">
-        {ceregories.map((catagory) => (
-          <article className="uppercase font-semibold mb-3">
-            <h2>{catagory.name}</h2>
-          </article>
-        ))}
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 m-5">
+        {servise.map((servic) => {
+          return <ServiceCard key={servic.id} services={servic} />;
+        })}
       </div>
     </>
   );

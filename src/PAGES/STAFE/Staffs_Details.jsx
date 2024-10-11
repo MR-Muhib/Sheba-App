@@ -1,8 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-const Stafs = () => {
-  const navigate = useNavigate();
+const Staffs_Details = () => {
   const staff = [
     {
       id: 1,
@@ -64,36 +62,7 @@ const Stafs = () => {
       },
     },
   ];
-  return (
-    <div className="grid md:grid-cols-2 m-5 p-3 gap-4">
-      {staff.map((staf) => {
-        const { name, location, image, services, detels, rate, email } = staf;
-
-        return (
-          <div className="w-full border shadow-md p-3">
-            <img
-              className="w-16 mx-auto rounded-full "
-              src={image}
-              alt={name}
-            />
-            <h2 className="text-center font-semibold">{location}</h2>
-            <h2 className="text-center ">{services}</h2>
-            <h2 className="text-center ">{"BDT " + rate}</h2>
-            <h2 className="text-center ">{detels}</h2>
-            <h2 className="text-center ">{email}</h2>
-            <button
-              onClick={() => {
-                navigate(`/stafs_details/${staf.id}`);
-              }}
-              className="bg-sky-700 px-4 py-1 text-white shadow-xl rounded-3xl active:shadow-white "
-            >
-              See profile<i class="fa-solid fa-angles-right"></i>
-            </button>
-          </div>
-        );
-      })}
-    </div>
-  );
+  return <div>stafs_details</div>;
 };
 
-export default Stafs;
+export default Staffs_Details;

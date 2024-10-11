@@ -10,6 +10,7 @@ import "./App.css";
 import Navbar from "./COMPONENTS/NAVBAR/Navbar";
 import ServisesDetails from "./PAGES/SERVICES/ServisesDetails";
 import AuthProvider from "./Context/AuthProvider";
+import Staffs_Details from "./PAGES/STAFE/Staffs_Details";
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="service" element={<Services />} />
-          <Route path="service_details/:id" element={<ServisesDetails />} />
-          <Route path="stafs" element={<Stafs />} />
+          <Route path="/service" element={<Services />} />
+          <Route path="/service_details/:id" element={<ServisesDetails />} />
+          <Route path="/stafs_details/:id" element={<Staffs_Details />} />
+          <Route path="/stafs" element={<Stafs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
