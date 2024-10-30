@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import StaffAbout from "./StaffAbout";
+import StaffReview from "./StaffReview";
 
-const Staffs_Details = () => {
-  const staff = [
+const StaffsDetails = () => {
+  const { id } = useParams();
+  const [toggle, setToggle] = useState(false);
+  const [currentTab, setCurrentTab] = useState("About");
+
+  // <------------ toggle button click functions--------------->
+  const handleClick = (tabName) => {
+    if (currentTab !== tabName) {
+      setCurrentTab(tabName);
+      setToggle(!toggle);
+    }
+  };
+
+  // <------------ render staff details--------------->
+  const StaffDetails = [
     {
       id: 1,
       name: "Muhibur rahman",
@@ -62,7 +78,48 @@ const Staffs_Details = () => {
       },
     },
   ];
-  return <div>stafs_details</div>;
+
+  const staff = StaffDetails.find((staff) => staff.id === parseInt(id));
+  const { name, image, email, rate } = staff;
+  return (
+    <>
+      <div className="m-9">
+        <div className="mb-4 flex items-center">
+          <img
+            className="w-[100px] h-[100px] rounded-full p-1 "
+            src={image}
+            alt={name}
+          />
+          <div className="pl-4">
+            <h3 className="font-semibold text-xl">{name}</h3>
+            <p className="">{email}</p>
+            <p className="">${rate}</p>
+          </div>
+        </div>
+
+        <div className="flex">
+          <button
+            onClick={() => handleClick("About")}
+            className={`p-2 font-semibold text-md border-b mr-5 ${
+              toggle ? "text-black" : "text-sky-600"
+            } ${toggle ? "hover:border-b-sky-400" : "border-b-sky-400"}`}
+          >
+            About
+          </button>
+          <button
+            onClick={() => handleClick("Rateing")}
+            className={`p-2 font-semibold text-md border-b mr-5 ${
+              toggle ? "text-blue-600" : "text-black"
+            } ${toggle ? "border-b-sky-400" : "hover:border-b-sky-400"}`}
+          >
+            Rating and Reviews
+          </button>
+        </div>
+        {/* Conditionally render `StaffAbout` or `StaffReview` based on toggle */}
+      </div>
+      {toggle ? <StaffReview staff={staff} /> : <StaffAbout staff={staff} />}
+    </>
+  );
 };
 
-export default Staffs_Details;
+export default StaffsDetails;

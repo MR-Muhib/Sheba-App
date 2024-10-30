@@ -10,7 +10,7 @@ const Staffs = () => {
       bio: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here",
       rate: 1500,
       detels: "",
-      services: ["AC", "Senetary"],
+      services: ["AC Servising", "Senetary"],
       image: "https://www.sylhetbar.com.bd/uploads/images/member/2267.jpg",
     },
     {

@@ -85,12 +85,11 @@ const Services = () => {
     },
   ];
 
-  // service_details/:id
   return (
     <>
       <h1 className="text-4xl m-5 font-bold">All Servises</h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 m-5">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 m-5">
         {servise.map((servic) => {
           return <ServiceCard key={servic.id} services={servic} />;
         })}

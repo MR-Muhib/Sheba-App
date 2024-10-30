@@ -1,10 +1,30 @@
-{
-  "User": [
-    {
-      "id": "1",
-      "name": "Muhibur",
-      "email": "mrmuhhib300@gmail.com",
-      "password": "123456"
-    }
-  ]
-}
+ staffs = [
+  {
+      "id": 1,
+      "name": "John's AC Repairs",
+      "bio": "Experienced HVAC technician with over 10 years in the industry.",
+      "location": "New York, NY",
+      "rate": "$80/hour",
+      "details": "Specializes in residential and commercial AC repair and maintenance.",
+      "services": [
+          "AC installation",
+          "AC repair",
+          "AC maintenance"
+      ],
+      "image": "https://example.com/images/johns_ac_repairs.jpg"
+  },
+  {
+      "id": 2,
+      "name": "Cool Breeze Services",
+      "bio": "Family-owned business providing top-notch refrigeration services.",
+      "location": "Los Angeles, CA",
+      "rate": "$75/hour",
+      "details": "Expert in both residential and commercial refrigeration systems.",
+      "services": [
+          "Fridge repair",
+          "Freezer repair",
+          "Refrigeration system installation"
+      ],
+      "image": "https://example.com/images/cool_breeze_services.jpg"
+  },
+]
