@@ -11,6 +11,7 @@ import Navbar from "./COMPONENTS/NAVBAR/Navbar";
 import ServisesDetails from "./PAGES/SERVICES/ServisesDetails";
 import AuthProvider from "./Context/AuthProvider";
 import StaffsDetails from "./COMPONENTS/Staffs/Staffs_Details";
+import Booknow from "./COMPONENTS/BookProduct/Booknow";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/service" element={<Services />} />
           <Route path="/service_details/:id" element={<ServisesDetails />} />
           <Route path="/stafs_details/:id" element={<StaffsDetails />} />
+          <Route path="/booknow" element={<Booknow />} />
           <Route path="/stafs" element={<Stafs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

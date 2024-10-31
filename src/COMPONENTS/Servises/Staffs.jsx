@@ -41,7 +41,10 @@ const Staffs = () => {
               <h3 className="text-center">{staf.services}</h3>
               <p className="text-center font-semibold">{staf.rate}</p>
               <div className="flex justify-between pl-2 pr-2 ">
-                <Link className="bg-[#166535] text-white pl-3 pr-3 pt-1 pb-1 rounded-3xl text-sm shadow-md font-semibold">
+                <Link
+                  to="/booknow"
+                  className="bg-[#166535] text-white pl-3 pr-3 pt-1 pb-1 rounded-3xl text-sm shadow-md font-semibold"
+                >
                   book now <i class="fa-solid fa-wallet"></i>
                 </Link>
 

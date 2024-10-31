@@ -5,10 +5,10 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="bg-white h-20 sticky shadow-md ">
+    <div className="bg-white h-20 sticky top-0 shadow-md">
       <div className="container flex justify-between mx-auto p-5">
         <Link to="/">
-          <img src={Logo} className="w-10" />
+          <img src={Logo} className="w-10" alt="logo" />
         </Link>
         <div className="">
           <NavLink

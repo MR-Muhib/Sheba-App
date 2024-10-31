@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Define custom scrollbar styles */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: pink;
+    border-radius: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: lightblue;
+  }
+}
+
 /* In your main Tailwind CSS file (e.g., styles.css) */
 @layer components {
   .example::-webkit-scrollbar {
