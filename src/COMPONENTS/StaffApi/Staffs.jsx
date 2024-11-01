@@ -6,7 +6,7 @@ const Staffs = [
     bio: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here",
     rate: 1500,
     detels: "",
-    services: ["AC", "Senetary"],
+    services: ["ac", "senetary", "gas", "clean", "shipings"],
     image: "https://www.sylhetbar.com.bd/uploads/images/member/2267.jpg",
     username: "Bret",
     email: "Sincere@april.biz",
@@ -35,7 +35,7 @@ const Staffs = [
     bio: "Are you looking for skilled nurses to care for your family’s elderly parents or sick loved ones? Life nursing home health care services is provided by experienced nurses and caregivers at home service. Now to get home nursing services at home, Life Nursing Care is at your side.",
     rate: 5000,
     detels: "",
-    services: ["Nursing Home Care Dhaka"],
+    services: ["Nursing Home Care", "pre", "health", "babysister", "careing"],
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG8e7JewfOQekbFsbjCM3QW6IaEoNNsdiecQ&s",
     username: "Antonette",

@@ -1,16 +1,26 @@
 import React, { useState } from "react";
 import Services from "../../COMPONENTS/ServiceApi/Services";
-import { BiArrowBack } from "react-icons/bi";
-// import Staffs from "../../COMPONENTS/StaffApi/Staffs";
-// const [staffs] = useState(Staffs);
+import Staffs from "../../COMPONENTS/StaffApi/Staffs";
 
 const Booknow = () => {
   const [count, setCount] = useState(0);
   const [product] = useState(Services);
+  const [staffs] = useState(Staffs);
   const [checkedServices, setCheckedServices] = useState([]);
 
-  const handleCheckboxChange = (event, serviceId, arr) => {
-    console.log(event, serviceId, arr);
+  const handleCheckboxChange = (event, serviceId) => {
+    const serviceName = product.find((item) => item.id === serviceId);
+    // console.log(serviceName.services); // You can use this data to display service details in the Booknow component. For example, you can fetch the service data from an API and display it here.
+
+    const staffServiceName = staffs.map((staff) => staff.services);
+    // console.log(staffServiceName);
+
+    for (let i = 0; i < staffServiceName.length; i++) {
+      // console.log(staffServiceName[i]);
+      if (staffServiceName[i] === "ac") console.log("hello world");
+      // if (staffServiceName[i] === serviceName) console.log("serviceName");
+    }
+
     if (event.target.checked) {
       setCheckedServices((prev) => [...prev, serviceId]);
       setCount(count + 1);
