@@ -83,8 +83,8 @@ const StaffsDetails = () => {
   const { name, image, email, rate } = staff;
   return (
     <>
-      <div className="m-9">
-        <div className="mb-4 flex items-center">
+      <div>
+        <div className="mb-4 flex items-center" key={staff.id}>
           <img
             className="w-[100px] h-[100px] rounded-full p-1 "
             src={image}
@@ -117,7 +117,11 @@ const StaffsDetails = () => {
         </div>
         {/* Conditionally render `StaffAbout` or `StaffReview` based on toggle */}
       </div>
-      {toggle ? <StaffReview staff={staff} /> : <StaffAbout staff={staff} />}
+      {toggle ? (
+        <StaffReview staff={staff} key={staff.id} />
+      ) : (
+        <StaffAbout staff={staff} key={staff.id} />
+      )}
     </>
   );
 };

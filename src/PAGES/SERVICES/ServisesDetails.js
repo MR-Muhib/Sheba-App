@@ -93,7 +93,7 @@ const ServisesDetails = () => {
   return (
     <>
       <h1 className="m-5 text-xl font-semibold">{servic.name}</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 m-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 m-5" key={servise.id}>
         <div className="p-5">
           <img
             className="mx-auto rounded-md "
