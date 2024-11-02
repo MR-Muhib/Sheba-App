@@ -1,5 +1,5 @@
 import React from "react";
-import HomeCard from "./HomeCard";
+
 const Home = () => {
   return (
     <div>
@@ -25,10 +25,6 @@ const Home = () => {
             className="w-full bg-white focus:outline-none p-1 "
           />
         </div>
-      </div>
-
-      <div>
-        <HomeCard />
       </div>
     </div>
   );
