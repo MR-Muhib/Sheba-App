@@ -26,7 +26,7 @@ const Signup = () => {
   };
 
   return (
-    <>
+    <div className="w-full h-[100lvh]">
       <form
         id="sign_up_form"
         onSubmit={handleSubmit(onSubmit)}
@@ -91,7 +91,7 @@ const Signup = () => {
           />
         </div>
       </form>
-    </>
+    </div>
   );
 };
 

@@ -28,7 +28,7 @@ const Staffs = () => {
 
   return (
     <div>
-      <div className="w-full p-5 grid xl:grid-cols-2">
+      <div className="w-full p-5 mb-2  grid xl:grid-cols-2">
         {staff.map((staf) => {
           return (
             <div className="w-full pb-1 m-3 border shadow-md hover:border-black">

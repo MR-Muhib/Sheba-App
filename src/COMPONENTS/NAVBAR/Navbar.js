@@ -5,8 +5,8 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="bg-white h-20 sticky top-0 shadow-md">
-      <div className="container flex justify-between mx-auto p-5">
+    <div className="bg-white h-20 sticky top-0 shadow-md z-20">
+      <div className="max-w-6xl mx-auto w-full flex justify-between p-4">
         <Link to="/">
           <img src={Logo} className="w-10" alt="logo" />
         </Link>
@@ -29,7 +29,7 @@ const Navbar = () => {
                 : "px-5 hover:bg-sky-500 hover:text-white py-2 px-5 mt-2 "
             }
           >
-            Servises
+            Services
           </NavLink>
           <NavLink
             to="stafs"

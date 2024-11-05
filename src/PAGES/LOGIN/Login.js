@@ -12,11 +12,11 @@ const Login = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <>
-      {" "}
-      <form id="login_form"
+    <div className="w-full h-[100lvh]">
+      <form
+        id="login_form"
         onSubmit={handleSubmit(onSubmit)}
-        className="mx-auto w-full h-96 flex content-center items-center md:w-2/4 p-5"
+        className="mx-auto w-full flex content-center items-center md:w-2/4 p-5"
       >
         <div className="w-full ">
           <h1 className="m-5 uppercase text-center underline font-bold text-sky-500">
@@ -63,7 +63,7 @@ const Login = () => {
           />
         </div>
       </form>
-    </>
+    </div>
   );
 };
 
