@@ -11,24 +11,27 @@ import ServisesDetails from "./PAGES/SERVICES/ServisesDetails";
 import AuthProvider from "./Context/AuthProvider";
 import StaffsDetails from "./COMPONENTS/Staffs/Staffs_Details";
 import Booknow from "./COMPONENTS/BookProduct/Booknow";
+import Layout from "../src/Layouts/Layout.jsx";
 
 function App() {
   // window.scrollTo(0, 0);
   return (
     <>
-      <AuthProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
+      <Layout>
+        <AuthProvider>
+          <Routes>
+            <Route path="/" element={<Home />} />
 
-          <Route path="/service" element={<Services />} />
-          <Route path="/service_details/:id" element={<ServisesDetails />} />
-          <Route path="/stafs_details/:id" element={<StaffsDetails />} />
-          <Route path="/booknow" element={<Booknow />} />
-          <Route path="/stafs" element={<Stafs />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-        </Routes>
-      </AuthProvider>
+            <Route path="/service" element={<Services />} />
+            <Route path="/service_details/:id" element={<ServisesDetails />} />
+            <Route path="/stafs_details/:id" element={<StaffsDetails />} />
+            <Route path="/booknow" element={<Booknow />} />
+            <Route path="/stafs" element={<Stafs />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </AuthProvider>
+      </Layout>
     </>
   );
 }

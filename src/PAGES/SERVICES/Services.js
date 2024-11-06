@@ -1,9 +1,7 @@
 import React from "react";
 import ServiceCard from "../../COMPONENTS/Servises/ServiceCard";
-import Layout from "../../Layouts/Layout";
 
 const Services = () => {
-  window.scrollTo(0, 0);
   const servise = [
     {
       id: 1,
@@ -88,17 +86,15 @@ const Services = () => {
   ];
 
   return (
-    <Layout>
-      <div className="w-full max-w-6xl px-4 mx-auto min-h-screen">
-        <h1 className="text-4xl m-5 font-bold">All Service</h1>
+    <div className="w-full max-w-6xl px-4 mx-auto min-h-screen">
+      <h1 className="text-4xl m-5 font-bold">All Service</h1>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 m-5 overflow-hidden">
-          {servise.map((servic) => {
-            return <ServiceCard key={servic.id} services={servic} />;
-          })}
-        </div>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 m-5 overflow-hidden">
+        {servise.map((servic) => {
+          return <ServiceCard key={servic.id} services={servic} />;
+        })}
       </div>
-    </Layout>
+    </div>
   );
 };
 
